@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bazar Novias y XV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleLogin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="imagenes/logo3.png" alt="Logo de Bazar Novias y XV" class="logo">
+            <h1>Bazar Novias y XV</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="#">Tabla de Tallas</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="header-actions">
+            <a href="#" class="action-btn"><i class="fas fa-search"></i></a>
+            <div class="MenuDesplegableSesion">
+                <button onmouseover="mostrarVentanaLogin()" onmouseout="ocultarVentanaLogin()">Iniciar Sesion</button>
+                <div class="VentanaLoginContenido">
+                    <input type="text" id="login-user" placeholder="Usuario" required>
+                    <input type="password" id="login-password" placeholder="Contraseña" required>
+                    <button onclick="iniciarSesion()">Iniciar sesión</button>
+                    <div id="error-msg" class="error"></div>
+                    <div class="opciones-adicionales">
+                        <label><input type="checkbox"> Recuérdame</label>
+                        <a href="ResetPassword.html">¿Olvidaste la contraseña? </a>
+                    </div>
+                    <p>¿Primera vez en la pagina? <a href="Signup.html">Ingresa ahora.</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <img src="imagenes/banner.jpg" alt="Banner Principal">
+        </section>
+        <section class="categorias">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img src="imagenes/novias.jpg" alt="Vestidos de Novia"><br>
+                    <!-- Botón de Novias -->
+                    <a href="productos.html#Novias" class="categoria-button">Novias</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="imagenes/xv.jpg" alt="Vestidos de XV"><br>
+                    <!-- Botón de XV -->
+                    <a href="productos.html#XV" class="categoria-button">XV</a>
+                </div>
+            </div>
+        </section>
+        
+
+            <section class="destacados">
+                <h2 class="text-center">Productos Destacados</h2>
+                <!-- Carrusel de productos destacados -->
+                <div id="carouselDestacados" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6 producto">
+                                    <img src="imagenes/producto1.jpg" alt="Producto 1">
+                                    <p><strong>Vestido esmeralda de XV</strong></p>
+                                    <p>$7,000</p>
+                                </div>
+                                <div class="col-md-6 producto">
+                                    <img src="imagenes/producto2.jpg" alt="Producto 2">
+                                    <p><strong>Vestido de Novia Moderno</strong></p>
+                                    <p>$10,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6 producto">
+                                    <img src="imagenes/producto3.jpg" alt="Producto 3">
+                                    <p><strong>Vestido moderno de XV</strong></p>
+                                    <p>$8,000</p>
+                                </div>
+                                <div class="col-md-6 producto">
+                                    <img src="imagenes/producto4.jpg" alt="Producto 4">
+                                    <p><strong>Vestido de XV oro</strong></p>
+                                    <p>$9,000</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+            <!--carrusel-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestacados" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDestacados" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Bazar Novias y XV. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="codigo.js"></script>
+</body>
+</html>
